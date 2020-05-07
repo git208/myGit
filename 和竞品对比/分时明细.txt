@@ -1,0 +1,30 @@
+# 分时明细对比竞品  方法一   返回部分的数据最多100条  
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CRAWLER_TICK_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE_A': 'IC2006.cff', #针对和东财股票代码不一样的情况（期货）  android使用  
+		'CODE_P': '061106.cff', #爬虫使用
+		'SUBTYPE_C': 'CFF_IC',
+		'COUNT': '100',
+		'DURATION_SECONDS': 60,
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 分时明细对比竞品  方法二   返回全部的数据 
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CRAWLER_TICK_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE_A': 'IC2006.cff', #针对和东财股票代码不一样的情况（期货）  android使用  
+		'CODE_P': '061106.cff', #爬虫使用
+		'SUBTYPE_C': 'CFF_IC',
+		'DURATION_SECONDS': 60,
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

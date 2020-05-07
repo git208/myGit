@@ -1,0 +1,11 @@
+# CDR,GDR联动 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'DRLINKQUOTE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': 'HTSC.uk'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

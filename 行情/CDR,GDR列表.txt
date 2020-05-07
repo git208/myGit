@@ -1,0 +1,12 @@
+﻿# CDR,GDR列表 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'DRQUOTELIST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'DRCODE': 'gdr',
+		'PARAMS':'0,12,3,1'   #页码,笔数,排序栏位,(1:降序,0:升序)
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

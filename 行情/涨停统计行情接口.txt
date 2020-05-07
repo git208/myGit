@@ -1,0 +1,12 @@
+# 涨停统计行情接口  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'ZTSORTINGTEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'PARAMS': '0,20,0,1',   #页码,笔数,排序栏位,(1:降,0:升)
+		'TYPE': 'allzt'     #   allzt  yzzt  zrzt
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

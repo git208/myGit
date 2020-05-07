@@ -1,0 +1,24 @@
+﻿# 期权——交割月  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OPTIONEXPIRE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '510050.sh'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 期权——交割月  方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OPTIONEXPIRE_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '510050.sh',
+		'adjusted': 'false' #true
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

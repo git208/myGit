@@ -1,0 +1,13 @@
+# k线复权  方法一  
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CRAWLER_OHLCSUBTEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE_A': '600774.sh', #针对和东财股票代码不一样的情况（期货）  android使用  
+		'CODE_P': '600774.sh', #爬虫使用
+		'DURATION_SECONDS': 60,
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

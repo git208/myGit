@@ -1,0 +1,11 @@
+﻿# 沪深A股及指数涨跌平家数 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'UPDOWNS_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'UDCODE': '000001.sh'   #SHSZ或者指数代码
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

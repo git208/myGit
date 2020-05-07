@@ -1,0 +1,26 @@
+# 新版股名在线搜索接口 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'SEARV2TEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'KEYWORD': '60000',
+		'MARKET': 'sh'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+ # 新版股名在线搜索接口 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'SEARV2TEST_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'KEYWORD': '600',
+		'MARKET': 'sh',
+		'CATEGORIES': '10'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

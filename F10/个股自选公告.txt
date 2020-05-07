@@ -1,0 +1,31 @@
+﻿# 个股/自选公告 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_STOCKBULLETINLIST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',
+		'TYPE':'-1',  #-1  5  6
+		'NEWSID': "null",
+		'SRC':'d'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 个股/自选公告 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_STOCKBULLETINLIST_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',
+		'TYPE':'-1',  #-1  5  6
+		'NEWSID': "null",
+		'SRC':'d',
+		'PAGESIZE': '10'  #自定义条数
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

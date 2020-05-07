@@ -1,0 +1,32 @@
+# 走势数据 方法一 对应的TCP  对应走势数据的方法五
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'TCP_CHARTV2TEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',    
+		'PointAddType': '2',
+		'SECONDS': '100',
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 走势数据 方法二 对应的TCP  对应走势数据的方法六
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'TCP_CHARTV2TEST_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',
+		'RETURNAFDATA': 'false',
+		'SECONDS': '100',
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

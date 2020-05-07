@@ -1,0 +1,25 @@
+﻿# 板块排序接口 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'BANKUAISORTING_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'SYMBOL': 'Trade',   #android CategoryType
+		'PARAMS': '0,12,hsl,0'	#页码,笔数,排序栏位,(1:升,0:降)
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 板块排序接口 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'BANKUAISORTING_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'SYMBOL': 'Trade',   #android CategoryType
+		'PARAMS': '0,12,hsl,0'	#始,止,排序栏位,(1:升,0:降)
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

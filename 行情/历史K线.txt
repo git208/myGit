@@ -1,0 +1,97 @@
+# 历史K线  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OHLCV3_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'PERIOD':'dayk',   #OHLChartType android
+		'SUBTYPE':'1001',
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+ # 历史K线 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OHLCV3_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'PERIOD':'dayk',  #OHLChartType android
+		'SUBTYPE':'1001',
+		'PRICEADJUSTEDMODE':'2',   #复权标识符 0,1,2
+		'DATE':'20191223'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 历史K线  方法三
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OHLCV3_3'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'DATE':'20191223',
+		'SUBTYPE':'1001',
+		'PERIOD':'dayk',    #OHLChartType android
+		'PRICEADJUSTEDMODE':'2'   #复权标识符 0,1,2
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+ # 历史K线  方法四
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OHLCV3_4'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE':'1001',
+		'BeginDate':'20191202',
+		'EndDate':'20191224',
+		'PERIOD':'dayk',         #OHLChartType android
+		'PRICEADJUSTEDMODE':'2'  #复权标识符 0,1,2
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 历史K线  方法五
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OHLCV3_5'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE':'1001',
+		'PERIOD':'dayk',    #OHLChartType android
+		'PRICEADJUSTEDMODE':'2',   #复权标识符 0,1,2
+		'DATE':'20191223',
+		'COUNT':'300'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 历史K线  方法六
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OHLCV3_6'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE':'1001',
+		'DATE':'20191223',
+		'PERIOD':'dayk',          #OHLChartType android
+		'PRICEADJUSTEDMODE':'2',  #复权标识符 0,1,2
+		'COUNT':'300'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

@@ -1,0 +1,11 @@
+# 港股通/沪深股通额度走势  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'TONGLINETEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'TYPE': 'hkt'       #  hkt  hst
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

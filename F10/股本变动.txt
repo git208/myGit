@@ -1,0 +1,12 @@
+﻿# 股本变动 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_STOCKSHARECHANGEINFO_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',  #港股有数据
+		'SRC':'d'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

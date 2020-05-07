@@ -1,0 +1,12 @@
+# 板块类股票行情 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CATEQUOTE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CATEGORYID': 'SH1001',
+		'PAGEINDEX': '0'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

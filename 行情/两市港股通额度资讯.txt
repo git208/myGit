@@ -1,0 +1,10 @@
+# 两市港股通额度资讯 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'HKMARINFO_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

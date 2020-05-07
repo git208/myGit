@@ -1,0 +1,26 @@
+# 买卖队列 方法一   L2
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'ORDERQUANTITY_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 买卖队列 方法二    L2
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'ORDERQUANTITY_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'MARKET': 'sh',
+		'SUBTYPE': '1001',
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

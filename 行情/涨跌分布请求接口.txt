@@ -1,0 +1,13 @@
+﻿# 涨跌分布请求接口 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'COMPOUNDUPDOWN_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'MARKET': 'sh',   #市场
+		'TIME': '201912241024', #时间
+		'TYPE':'0'    #当日或30日  0、1
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

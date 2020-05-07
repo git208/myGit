@@ -1,0 +1,28 @@
+﻿# 要约收购接口请求  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OFFERQUOTE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '002552.sz' #要约的股票代码
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 要约收购接口请求  方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OFFERQUOTE_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'PAGEINDEX': '0',   #起始条数位置
+		'PAGESIZE': '10',    #查询条数
+		'FIELD': '1',        #排序栏位 0-6
+		'ASCENDING': '0',        #排序类型（升序、降序）0 1
+
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

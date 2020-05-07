@@ -1,0 +1,12 @@
+﻿ # 新债详情  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_BNDSHAREIPODETAI_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '370577.sz',  # 传新债列表的股票代码  APPLYCODE
+		'SRC': 'd'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

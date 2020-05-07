@@ -1,0 +1,69 @@
+# 股票查询 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'SEARTEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'MARKET': 'sh'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 股票查询 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'SEARTEST_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'KEYWORD': '60000',
+		'SEARCHLIMIT': '10'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 股票查询 方法三
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'SEARTEST_3'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'KEYWORD': '600',
+		'CATEGORIES': 'SH1001',
+		'SEARCHLIMIT': '10'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+ # 股票查询 方法四
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'SEARTEST_4'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'KEYWORD': '600',
+		'CATEGORIES': 'SH1001',
+		'SEARCHLIMIT': '10',
+		'querySts': '9900'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 股票查询 方法五
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'SEARTEST_5'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'KEYWORD': '600',
+		'CATEGORIES': 'SH1001',
+		'SEARCHLIMIT': '10',
+		'querySts': '9900'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+

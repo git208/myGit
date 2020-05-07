@@ -1,0 +1,12 @@
+ # 财经资讯明細 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_NEWS_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'NEWSID':'',
+		'SRC':'d'  #传g有数据
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

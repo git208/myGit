@@ -1,0 +1,42 @@
+﻿# 排序接口 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CATESORTING_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CateType': 'SH1001',       #CateType android
+		'PARAMS': '0,12,1,0,1'   #页码,笔数,排序字段,(1:降,0:升),(是否显示停牌股，1:是,0:非)
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 排序接口 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CATESORTING_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CateType': 'SH1001',       #CateType  android
+		'PARAMS': '0,12,1,0,1',  #页码,笔数,排序字段,(1:降,0:升),(是否显示停牌股，1:是,0:非)
+		'STOCKFIELDS': '-1',     #'-1'/None/'NULL'传这三个参数可返回所有，且只能返回所有，目前暂不支持自定义 
+		'ADDVALUEFIELDS': '-1'   #只能传'-1'，且只能返回所有，目前暂不支持自定义，不可传空，若传空，IOS端不返回叠加指标，Andriod端不返回叠加指标
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 排序接口 方法三
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CATESORTING_3'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CateType': 'SH1001',       #CateType  android
+		'PARAMS': '0,12,1,0,1',  #页码,笔数,排序字段,(1:降,0:升),(是否显示停牌股，1:是,0:非)
+		'STOCKFIELDS': '-1',     #'-1'/None/'NULL'传这三个参数可返回所有，且只能返回所有，目前暂不支持自定义 
+		'ADDVALUEFIELDS': '-1'   #只能传'-1'，且只能返回所有，目前暂不支持自定义，不可传空，若传空，IOS端不返回叠加	Andriod端不返回叠加指标
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

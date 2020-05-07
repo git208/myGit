@@ -1,0 +1,12 @@
+﻿# 期权——T型报价 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OPTIONTQUOTE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '510050.sh',
+		'EXPIREMONTH':'1912'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

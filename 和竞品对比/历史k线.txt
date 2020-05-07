@@ -1,0 +1,56 @@
+# 历史K线和竞品对比  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CRAWLER_OHLCV3_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE_A': '600774.sh', #针对和东财股票代码不一样的情况（期货）  android使用  
+		'CODE_P': '600774.sh', #爬虫使用
+		'SUBTYPE_C': 'SH1001',
+		'STARTDATE': '2020-03-30-09-30-00',
+		'ENDDATE': '2020-03-30-15-00-00',
+		'PERIOD': 'm1',  
+		'PRICEADJUSTEDMODE': '2',  # 复权标识符 0,1,2
+		'DURATION_SECONDS': 60,
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 历史K线和竞品对比  方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CRAWLER_OHLCV3_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE_A': '600774.sh', #针对和东财股票代码不一样的情况（期货）  android使用  
+		'CODE_P': '600774.sh', #爬虫使用
+		'SUBTYPE_C': 'SH1001',
+		'ENDDATE': '2020-03-27-14-51-00',
+		'PERIOD': 'dayk',  
+		'PRICEADJUSTEDMODE': '2',  # 复权标识符 0,1,2
+		'COUNT': '15',
+		'DURATION_SECONDS': 60,
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 历史K线和竞品对比  方法三
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CRAWLER_OHLCV3_3'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE_A': '600774.sh', #针对和东财股票代码不一样的情况（期货）  android使用  
+		'CODE_P': '600774.sh', #爬虫使用
+		'SUBTYPE_C': 'SH1001',
+		'PERIOD': 'dayk',  
+		'PRICEADJUSTEDMODE': '2',  # 复权标识符 0,1,2
+		'COUNT': '300',
+		'DURATION_SECONDS': 60,
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

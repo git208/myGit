@@ -1,0 +1,12 @@
+ # 个股所属板块行情 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'BANKUAIQUOTE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'trade'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

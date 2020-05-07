@@ -1,0 +1,1235 @@
+		# AH股列表 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'AHLIST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'PARAMS': '0,12,2,0' #页码,笔数,排序栏位,(1:降序,0:升序)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# AH股列表 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'AHLIST_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'PARAMS': '0,12,2,0' #始,止,排序栏位,(1:降序,0:升序)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# AH联动 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'AHQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '601005.sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# CDR,GDR联动 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'DRLINKQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': 'HTSC.uk'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# CDR,GDR列表 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'DRQUOTELIST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'DRCODE': 'gdr',
+				'PARAMS':'0,12,3,1'  #页码,笔数,排序栏位,(1:降序,0:升序)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# K线复权信息  方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OHLCSUB_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001' #IOS独有
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# uk市场快照单独接口，可支持多商品  方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'UKQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': 'HTSC.uk'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 板块排序接口 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'BANKUAISORTING_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'SYMBOL': 'Trade',   
+				'PARAMS': '0,12,hsl,0' #页码,笔数,排序栏位,(1:升,0:降)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 板块排序接口 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'BANKUAISORTING_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'SYMBOL': 'Trade',   
+				'PARAMS': '0,12,hsl,0' #始,止,排序栏位,(1:升,0:降)
+			})
+		])
+        runner_conf.casesConfig.extend([case_conf])
+		
+		# 板块类股票行情 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CATEQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CATEGORYID': 'SH1001',
+				'PAGEINDEX': '0'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 次新股 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SUBNEWSTOCKRANKING_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'PARAMS': '0,10,4,1'  #页码,笔数,排序栏位,(1:降,0:升)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 次新债 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SUBNEWBONDSTOCKRANKING_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'PARAMS': '0,10,4,1' #页码,笔数,排序栏位,(1:降,0:升)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# L2分笔 方法一  返回全部的数据
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'L2TICKV2_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# L2分笔 方法二  最多返回100条数据
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'L2TICKV2_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'page': '0,100,-1', #页码,笔数,请求规则
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+	
+		# L2逐笔 方法一  返回全部数据
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'L2TICKDETAILV2_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+
+		# L2逐笔 方法二   最多返回100条数据
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'L2TICKDETAILV2_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'page': '0,100,-1', #页码,笔数,请求规则
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+	
+		# 分价——适合所有市场  方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'MOREPRICE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001',
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 分价——只适合中金所  方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'MOREPRICE_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': 'IC2001.cff'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 分量--只用于沪深L2 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'MOREVOLUMETEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001' #IOS独有
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 分时明细  方法一    返回全部的数据
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TICK_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 分时明细  方法二    最多返回100条数据
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TICK_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'page': '0,100,-1', #页码,笔数,请求规则
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+	
+		# 港股其他 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'HKSTOCKINFO_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '00700.hk',
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 个股所属板块行情 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'BANKUAIQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'trade'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 股票查询 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SEARTEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'MARKET': 'sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 股票查询 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SEARTEST_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'KEYWORD': '60000',
+				'SEARCHLIMIT': '10'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 股票查询 方法三
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SEARTEST_3'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'KEYWORD': '600',
+				'CATEGORIES': 'SH1001',
+				'SEARCHLIMIT': '10'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 股票查询 方法四
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SEARTEST_4'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'KEYWORD': '600',
+				'CATEGORIES': 'SH1001',
+				'SEARCHLIMIT': '10',
+				'querySts': '9900'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 股票查询 方法五
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SEARTEST_5'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'KEYWORD': '600',
+				'CATEGORIES': 'SH1001',
+				'SEARCHLIMIT': '10',
+				'querySts': '9900'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 行情快照 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'QUOTEDETAIL_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 行情快照 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'QUOTEDETAIL_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TICKCOUNT': '10',
+				'STOCKFIELDS': '-1',  #'-1'/''传这三个参数可返回所有，且								只能返回所有，目前暂不支持自定义
+				'FIELDS':'-1'	#只能传'-1'，且只能返回所有，目前暂不支持							自定义，不可传空，若传空，IOS端不返回叠加							指标，Andriod端不清楚
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 沪股通和深股通额度 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'HSAMOUNT_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+			
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 沪深A股及指数涨跌平家数 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'UPDOWNS_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'UDCODE': '000001.sh'   #指数代码
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 沪深当日涨跌统计数据 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'MARKETUPDOWN_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+			
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 获取港股价差对照表 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'HKPRICEINFO_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+			
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 集合竞价1--传股票代码 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'BIDCHART_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'  
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 集合竞价2--传快照 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'BIDCHART_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'  
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 交易行情  方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TRADEQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+			
+		# 节假日 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'HOLIDAY_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+			
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 经纪席位 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'BROKERINFO_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '00700.hk'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 可转债溢价查询 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CONVERTIBLE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 历史K线  方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OHLCV3_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'PERIOD':'dayk',
+				'SUBTYPE':'1001',   
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		 # 历史K线 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OHLCV3_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'PERIOD':'dayk', 
+				'SUBTYPE':'1001',
+				'PRICEADJUSTEDMODE':'2',  
+				'DATE':'20191223'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+
+		# 历史K线  方法三
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OHLCV3_3'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'DATE':'20191223',
+				'SUBTYPE':'1001',
+				'PERIOD':'dayk',   
+				'PRICEADJUSTEDMODE':'2'   
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		 # 历史K线  方法四
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OHLCV3_4'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE':'1001',
+				'BeginDate':'20191202',
+				'EndDate':'20191224',
+				'PERIOD':'dayk',         
+				'PRICEADJUSTEDMODE':'2'  
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 历史K线  方法五
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OHLCV3_5'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE':'1001',
+				'PERIOD':'dayk',    
+				'PRICEADJUSTEDMODE':'2',   
+				'DATE':'20191223',
+				'COUNT':'300'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 历史K线  方法六
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OHLCV3_6'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE':'1001',
+				'DATE':'20191223',
+				'PERIOD':'dayk',          
+				'PRICEADJUSTEDMODE':'2',  
+				'COUNT':'300'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 历史分时--传单只股票 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'HISTORYCHART_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE':'1001',
+				'DATE':'20191223'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 历史分时--传快照  方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'HISTORYCHART_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE':'1001',
+				'DATE':'20191223'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 两市港股通额度资讯 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'HKMARINFO_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+			
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# L2-买卖队列 方法一   
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ORDERQUANTITY_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+
+		# L2-买卖队列 方法二    
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ORDERQUANTITY_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'MARKET': 'sh',
+				'SUBTYPE': '1001',
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 排序接口 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CATESORTING_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CateType': 'SH1001',       
+				'PARAMS': '0,12,1,0,1'  #页码,笔数,排序字段,(1:降,0:升),(是否								显示停牌股，1:是,0:非)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 排序接口 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CATESORTING_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CateType': 'SH1001',      
+				'PARAMS': '0,12,1,0,1', #页码,笔数,排序字段,(1:降,0:升),(是否								显示停牌股，1:是,0:非)
+				'STOCKFIELDS': '-1',   #'-1'/'NULL'传这三个参数可返回所								有，且只能返回所有，目前暂不支持自定义 
+				'ADDVALUEFIELDS': '-1'  #只能传'-1'，且只能返回所有，目前暂不支持							自定义，不可传空，若传空，IOS端不返回叠加							指标，Andriod端不清楚
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 排序接口 方法三
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CATESORTING_3'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CateType': 'SH1001',       
+				'PARAMS': '0,12,1,0,1', #页码,笔数,排序字段,(1:降,0:升),(是否								显示停牌股，1:是,0:非)
+				'STOCKFIELDS': '-1',   #'-1'/'NULL'传这三个参数可返回所								有，且只能返回所有，目前暂不支持自定义 
+				'ADDVALUEFIELDS': '-1'  #只能传'-1'，且只能返回所有，目前暂不支持							自定义，不可传空，若传空，IOS端不返回叠加							指标，Andriod端不清楚
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+	
+		# 盘后走势接口 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'AFTERHOURSCHART_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'  
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 盘后走势接口 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'AFTERHOURSCHART_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'  
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 期权——T型报价 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OPTIONTQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '510050.sh',
+				'EXPIREMONTH':'2009'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 期权——标的行情 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OPTIONLIST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+			
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 期权——交割月  方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OPTIONEXPIRE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '510050.sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 期权——交割月  方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OPTIONEXPIRE_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '510050.sh',
+				'adjusted': 'true'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 期权——商品详情 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OPTIONQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'STOCKID': '510050.sh',
+				'PAGEINDEX':'0'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		 # 市场当年交易日  方法一(废弃)
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TRADEDATE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'MARKET': 'sh' 
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 市场当年交易日  方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TRADEDATE_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'MARKET': 'sh', 
+				'DATE': '20200524' #传None、'null'或不传时返回所有
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 新版股名在线搜索接口 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SEARV2TEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'KEYWORD': '60000',
+				'MARKET': 'sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		 # 新版股名在线搜索接口 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'SEARV2TEST_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'KEYWORD': '600',
+				'MARKET': 'sh',
+				'CATEGORIES': '10'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 要约收购接口请求  方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OFFERQUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh' 
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+
+		# 要约收购接口请求  方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OFFERQUOTE_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'PAGEINDEX': '0',   
+				'PAGESIZE': '10',    
+				'FIELD': '1',    #排序栏位    
+				'ASCENDING': '0',   #(0升，1降)    
+
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 增值指标 方法一 （废弃）
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ADDVALUE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 增值指标 方法二 （废弃）
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ADDVALUE_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001',
+				'MARKET':'sh' 
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 增值指标 方法三 
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ADDVALUE_3'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001',
+				'MARKET':'sh',   
+				'FIELDS':'-1'  #只能传'-1'，且只能返回所有，目前暂不支持							自定义
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		----# 涨跌分布请求接口 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'COMPOUNDUPDOWN_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'MARKET': 'sh',  
+				'TYPE': '0',  # 类别(0：当日,1：30日)
+				'TIME':'201912241024'    
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 证券行情列表 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'QUOTE_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 证券行情列表 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'QUOTE_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'STOCKFIELDS': '-1', #'-1'/'NULL'传这三个参数可返回所								有，且只能返回所有，目前暂不支持自定义
+				'FIELDS': '-1'	#只能传'-1'，且只能返回所有，目前暂不支持							自定义，不可传空，若传空，IOS端不返回叠加							指标，Andriod端不清楚
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 走势叠加 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OVERLAYCHART_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001',
+				'superpositionCode': '600004.sh',
+				'TYPE': 'ChartTypeOneDay',  
+				'pointType':'2' #IOS端无
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势叠加 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'OVERLAYCHART_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SUBTYPE': '1001', 
+				'superpositionCode': '600004.sh',
+				'TYPE': 'ChartTypeOneDay',  
+				'pointType':'2' #IOS端无
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 走势副图指标接口 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTSUB_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'ChartType': 'ChartTypeOneDay',  
+				'TYPE': '1'   
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势副图指标接口 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTSUB_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'ChartType': 'ChartTypeOneDay',   
+				'BEGIN':'0',
+				'END':'-1',
+				'TYPE': 'time,largeMoneyInflow '   
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 走势数据 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTV2TEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay',   
+				'SUBTYPE':'1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势数据 方法二
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTV2TEST_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay',
+				'SUBTYPE':'1001'   
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势数据 方法三
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTV2TEST_3'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay', 
+				'SUBTYPE':'1001'  
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势数据 方法四
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTV2TEST_4'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay',   
+				'PointAddTypes':'2',  #IOS无此参数
+				'SUBTYPE':'1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势数据 方法五
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTV2TEST_5'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay',   
+				'PointAddTypes':'2',  #IOS无此参数  
+				'SUBTYPE':'1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势数据 方法六
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'CHARTV2TEST_6'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay',   
+				'RETURNAFDATA':'false',
+  				'SUBTYPE':'1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		TCP-----------------------------------------------------------------
+
+		# 走势数据 方法一 对应的TCP  对应走势数据的方法五
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TCP_CHARTV2TEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay',    
+				'PointAddType': '2',
+				'SECONDS': '100'
+  				'SUBTYPE':'1001'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 走势数据 方法二 对应的TCP  对应走势数据的方法六
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TCP_CHARTV2TEST_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TYPE': 'ChartTypeOneDay',
+				'RETURNAFDATA': 'false',
+				'SECONDS': '100'
+  				'SUBTYPE':'1001'
+			})
+		])
+        runner_conf.casesConfig.extend([case_conf])
+		
+		# 交易行情 方法一 对应的TCP （IOS中为发现该方法）
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TCP_TRADETEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SECONDS': '10'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# 行情快照 方法一 对应的TCP
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'QUOTEDETAILTCPTEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SECONDS': '100'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 行情快照 方法二 对应的TCP
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'QUOTEDETAILTCPTEST_2'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'TICKCOUNT': '10',
+				'STOCKFIELDS': '-1', #'-1'/'NULL'传这三个参数可返回所								有，且只能返回所有，目前暂不支持自定义
+				'FIELDS': '-1',  #只能传'-1'，且只能返回所有，目前暂不支持							自定义，不可传空，若传空，IOS端不返回叠加							指标，Andriod端不清楚
+				'SECONDS': '100'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])	
+			
+		# 分笔L2 方法一 对应的TCP
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TCP_TICKTEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '600000.sh',
+				'SECONDS': '10'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+
+		# 港股通额度和沪深股通额度走势接口
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'TONGLINETEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'TYPE': 'hkt',
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])	
+	
+		# 涨停商品行情请求类
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ZTSORTINGTEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'PARAMS':'0,20,6,0', #页码,笔数,排序栏位,(1:降,0:升)
+				'TYPE': 'allzt',
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])

@@ -1,0 +1,12 @@
+﻿# 新股详情 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_NEWSHAREDETAIL_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'688081.sh',  #58环境有数据
+		'SRC': 'd'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

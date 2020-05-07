@@ -1,0 +1,12 @@
+﻿# 分红配送  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_BONUSFINANCE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',  #港股有数据目前1226
+		'SRC': 'd'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

@@ -1,0 +1,11 @@
+# 可转债溢价查询 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CONVERTIBLE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

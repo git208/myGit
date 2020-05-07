@@ -1,0 +1,86 @@
+# 走势数据 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTV2TEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',   #ChartTypeFiveDay
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 走势数据 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTV2TEST_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',   #ChartTypeFiveDay
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 走势数据 方法三
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTV2TEST_3'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',   #ChartTypeFiveDay
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 走势数据 方法四
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTV2TEST_4'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',   #ChartTypeFiveDay
+		'PointAddTypes':'2',  #补点方式ios无  android  PointAddType
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 走势数据 方法五
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTV2TEST_5'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',   #ChartTypeFiveDay
+		'PointAddTypes':'2',  #补点方式ios无  android  PointAddType
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 走势数据 方法六
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTV2TEST_6'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'TYPE': 'ChartTypeOneDay',   #ChartTypeFiveDay
+		'RETURNAFDATA':'false',  #补点方式ios无  android  PointAddType
+		'SUBTYPE':'1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

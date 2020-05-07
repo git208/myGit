@@ -1,0 +1,12 @@
+﻿# 大事提醒 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_IMPORTANTNOTICE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',
+		'SRC': 'd'   #只有港股数据   g
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

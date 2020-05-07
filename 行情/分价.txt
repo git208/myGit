@@ -1,0 +1,24 @@
+# 分价——适合所有市场  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'MOREPRICE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE': '1001',
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 分价——只适合中金所  方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'MOREPRICE_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': 'IC2001.cff'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

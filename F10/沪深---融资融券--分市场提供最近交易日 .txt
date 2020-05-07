@@ -1,0 +1,46 @@
+﻿ # 沪深---融资融券--分市场提供最近交易日  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_FINANCEMRGNIN_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'MARKET':'FINBALANCE_sh_0',
+		'SRC': 'd',
+		'PARAMS': '1,10',
+		'OPTIONS': 'TRADEDATE,TRADING'    #或者'OPTIONS': None
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 沪深---融资融券--分市场提供最近交易日  方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_FINANCEMRGNIN_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'MARKET':'sh',
+		'SRC': 'd',
+		'PARAMS': '1,10',
+		'OPTIONS': 'TRADEDATE,FINBALANCESUM'    #或者'OPTIONS': None
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# 沪深---融资融券--分市场提供最近交易日  方法三
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_FINANCEMRGNIN_3'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',
+		'SRC': 'd',
+		'PARAMS': '1,10',
+		'OPTIONS': 'TRADEDATE,TRADING'    #或者'OPTIONS': None
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

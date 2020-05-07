@@ -1,0 +1,29 @@
+﻿# 走势副图指标接口 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTSUB_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'ChartType': 'ChartTypeOneDay',  #传五日报错，只能传当日，ios无此参数
+		'TYPE': '1'   #ChartSubType android
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 走势副图指标接口 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CHARTSUB_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'ChartType': 'ChartTypeOneDay',   #传五日报错，只能传当日，ios无此参数
+		'BEGIN':'0',
+		'END':'-1',
+		'TYPE': 'time,largeMoneyInflow'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

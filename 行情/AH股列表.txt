@@ -1,0 +1,23 @@
+ # AH股列表 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'AHLIST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'PARAMS': '0,12,2,0'	#页码,笔数,排序栏位,(1:降序,0:升序)
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# AH股列表 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'AHLIST_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'PARAMS': '0,12,2,0'	#始,止,排序栏位,(1:降序,0:升序)
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

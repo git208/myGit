@@ -1,0 +1,26 @@
+﻿# 财务报表 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_MAINFINADATANASS_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'00700.hk',  #港股才有数据  00700.hk
+		'SRC': 'd'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 财务报表--仅用于港股 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'F10_MAINFINADATANASS_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '00700.hk',
+		'SRC': 'd',
+		'PARAMS': "null"  # null  N  字段
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

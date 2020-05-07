@@ -1,0 +1,26 @@
+﻿# 盘后走势接口 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'AFTERHOURSCHART_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE': '1001'  #android 方法一无此参数
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 盘后走势接口 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'AFTERHOURSCHART_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE': '1001'  #android 方法一无此参数
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+

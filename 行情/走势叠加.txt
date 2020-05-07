@@ -1,0 +1,31 @@
+# 走势叠加 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OVERLAYCHART_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE': '1001',
+		'superpositionCode': '600004.sh',
+		'TYPE': 'ChartTypeOneDay',  #ChartTypeFiveDay
+		'pointType':'2'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 走势叠加 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'OVERLAYCHART_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE': '1001',
+		'superpositionCode': '600004.sh',
+		'TYPE': 'ChartTypeOneDay',  #ChartTypeFiveDay
+		'pointType':'2'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

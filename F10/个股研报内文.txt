@@ -1,0 +1,12 @@
+﻿# 个股研报内文 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_STOCKREPORT_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'STOCKREPORTID':'600000.sh_4734904',
+		'SRC':'d'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

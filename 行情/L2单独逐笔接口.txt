@@ -1,0 +1,27 @@
+# L2逐笔 方法一  返回全部数据
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'L2TICKDETAILV2_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SUBTYPE': '1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+
+# L2逐笔 方法二   最多返回100条数据
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'L2TICKDETAILV2_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'page': '0,100,-1',	#页码,笔数,请求规则
+		'SUBTYPE': '1001'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

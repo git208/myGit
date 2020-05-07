@@ -1,0 +1,18 @@
+# 行情快照对比竞品 方法一 
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'CRAWLER_QUOTEDETAIL_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE_A': '600000.sh', #针对和东财股票代码不一样的情况（期货）  android使用  
+		'CODE_P': '600000.sh', #爬虫使用
+		'SUBTYPE_C': 'SH1001', #次类别
+		'SHSC': 'KCB', #沪深期权：HSQQ//沪深市场：HSSC//期货市场：QHSC//指数：ZS//港股：GG
+				基金：JJ//债券：ZQ//科创板：KCB
+		'DURATION_SECONDS': 60, #预估爬虫时间，不传默认为20s
+		'STARTDATE': '2020-04-02-09-30-00',
+		'ENDDATE': '2020-04-02-15-40-00',
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

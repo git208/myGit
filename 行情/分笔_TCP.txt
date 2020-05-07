@@ -1,0 +1,12 @@
+# 分笔L2 方法一 对应的TCP
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'TCP_TICKTEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SECONDS': '10'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

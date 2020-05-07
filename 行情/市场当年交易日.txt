@@ -1,0 +1,24 @@
+ # 市场当年交易日  方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'TRADEDATE_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'MARKET': 'sh'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 市场当年交易日  方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'TRADEDATE_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'MARKET': 'sh',
+		'DATE': '20200428'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

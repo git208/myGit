@@ -1,0 +1,12 @@
+﻿# 个股新闻内文 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10_STOCKNEWS_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'STOCKNEWSID':'600000.sh_20191226020010304979',
+		'SRC':'d'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

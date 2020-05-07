@@ -1,0 +1,60 @@
+﻿# 財汇沪深盘后接口 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10V2TEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',
+		'SRC':'d',
+		'REQUESTTYPE':'/importantindex'   #F10Type
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 財汇沪深盘后接口 方法二
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10V2TEST_2'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',
+		'SRC':'d',
+		'PARAMS':'0,10',
+		'REQUESTTYPE':'/importnoticedate'   #F10Type
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 財汇沪深盘后接口 方法三
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10V2TEST_3'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE':'600000.sh',
+		'SRC':'d',
+		'quarterType':'EPSBASIC_0',  #季度数据类型
+		'REQUESTTYPE':'/profinmainindex'   #F10Type
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 財汇沪深盘后接口 方法四
+case_conf = TestcaseConfig()
+case_conf.testcaseID = 'F10V2TEST_4'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'CODE': '600000.sh',
+		'SRC': 'd',
+		'PARAMS': '0,10',
+		'REQUESTTYPE': '/importnoticedate',  # F10Type
+		'PART': None,  # 'PART': None   自定义字段
+		'TYPE': None  # 'TYPE': None  new  ，QUESTIONTIME_1等
+	})
+])
+runner_conf.casesConfig.extend([case_conf])

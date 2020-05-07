@@ -1,0 +1,12 @@
+﻿# 当日新债  方法一
+    case_conf = TestcaseConfig()
+    case_conf.testcaseID = 'F10_BNDNEWSHARESCAL_1'
+    case_conf.continueWhenFailed = True
+    case_conf.roundIntervalSec = 3
+    case_conf.paramStrs.extend([
+        json.dumps({
+            'DATE':'2019-12-26',
+            'SRC':'d'
+        })
+    ])
+    runner_conf.casesConfig.extend([case_conf])
