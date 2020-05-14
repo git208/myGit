@@ -5,7 +5,7 @@ case_conf.continueWhenFailed = True
 case_conf.roundIntervalSec = 3
 case_conf.paramStrs.extend([
 	json.dumps({
-		'CODE': '600000.sh'
+		'CODES': '600000.sh,000001.sz,00700.hk'
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])
@@ -17,9 +17,9 @@ case_conf.continueWhenFailed = True
 case_conf.roundIntervalSec = 3
 case_conf.paramStrs.extend([
 	json.dumps({
-		'CODE': '600000.sh',
-		'STOCKFIELDS': '-1',	#'-1'/None/'NULL'传这三个参数可返回所有，且只能返回所有，目前暂不支持自定义
-		'FIELDS': '-1'			#只能传'-1'，且只能返回所有，目前暂不支持自定义，不可传空，若传空，IOS端不返回叠加	
+		'CODES': '600000.sh,000001.sz,00700.hk'
+		'STOCKFIELDS': '-1', #'-1'/'NULL'传这三个参数可返回所								有，且只能返回所有，目前暂不支持自定义
+		'FIELDS': '-1'	#只能传'-1'，且只能返回所有，目前暂不支持							自定义，不可传空，若传空，IOS端不返回叠加							指标，Andriod端不清楚	
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])
