@@ -5,6 +5,7 @@ case_conf.continueWhenFailed = True
 case_conf.roundIntervalSec = 3
 case_conf.paramStrs.extend([
 	json.dumps({
+		'MARKET': 'sh,sz',
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])
