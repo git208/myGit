@@ -764,7 +764,7 @@ case_conf.paramStrs.extend([
 ])
 runner_conf.casesConfig.extend([case_conf])
 
- # 最新指标 方法一
+# 最新指标 方法一
 case_conf = TestcaseConfig()
 case_conf.testcaseID ='F10_NEWINDEX_1'
 case_conf.continueWhenFailed = True
@@ -773,6 +773,20 @@ case_conf.paramStrs.extend([
 	json.dumps({
 		'CODE':'00700.hk',  #港股有值
 		'SRC': 'd'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# f10通用接口(财联社源) 方法一
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='F10V2CLSTEST_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		'SYMBOL': '0',
+            	'REQUESTTYPE': '/clsimportantnewslist',
+            	'PARAMS': '0,200'
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])
