@@ -1,28 +1,28 @@
-		# AH¹ÉÁĞ±í ·½·¨Ò»
+		# AHè‚¡åˆ—è¡¨ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'AHLIST_1'
 		case_conf.continueWhenFailed = True
 		case_conf.roundIntervalSec = 3
 		case_conf.paramStrs.extend([
 			json.dumps({
-				'PARAMS': '0,12,2,0' #Ò³Âë,±ÊÊı,ÅÅĞòÀ¸Î»,(1:½µĞò,0:ÉıĞò)
+				'PARAMS': '0,12,2,0' #é¡µç ,ç¬”æ•°,æ’åºæ ä½,(1:é™åº,0:å‡åº)
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# AH¹ÉÁĞ±í ·½·¨¶ş
+		# AHè‚¡åˆ—è¡¨ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'AHLIST_2'
 		case_conf.continueWhenFailed = True
 		case_conf.roundIntervalSec = 3
 		case_conf.paramStrs.extend([
 			json.dumps({
-				'PARAMS': '0,12,2,0' #Ê¼,Ö¹,ÅÅĞòÀ¸Î»,(1:½µĞò,0:ÉıĞò)
+				'PARAMS': '0,12,2,0' #å§‹,æ­¢,æ’åºæ ä½,(1:é™åº,0:å‡åº)
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# AHÁª¶¯ ·½·¨Ò»
+		# AHè”åŠ¨ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'AHQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -34,7 +34,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# CDR,GDRÁª¶¯ ·½·¨Ò»
+		# CDR,GDRè”åŠ¨ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'DRLINKQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -46,7 +46,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# CDR,GDRÁĞ±í ·½·¨Ò»
+		# CDR,GDRåˆ—è¡¨ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'DRQUOTELIST_1'
 		case_conf.continueWhenFailed = True
@@ -54,12 +54,12 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'DRCODE': 'gdr',
-				'PARAMS':'0,12,3,1'  #Ò³Âë,±ÊÊı,ÅÅĞòÀ¸Î»,(1:½µĞò,0:ÉıĞò)
+				'PARAMS':'0,12,3,1'  #é¡µç ,ç¬”æ•°,æ’åºæ ä½,(1:é™åº,0:å‡åº)
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# KÏß¸´È¨ĞÅÏ¢  ·½·¨Ò»
+		# Kçº¿å¤æƒä¿¡æ¯  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OHLCSUB_1'
 		case_conf.continueWhenFailed = True
@@ -67,12 +67,12 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CODE': '600000.sh',
-				'SUBTYPE': '1001' #IOS¶ÀÓĞ
+				'SUBTYPE': '1001' #IOSç‹¬æœ‰
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ukÊĞ³¡¿ìÕÕµ¥¶À½Ó¿Ú£¬¿ÉÖ§³Ö¶àÉÌÆ·  ·½·¨Ò»
+		# ukå¸‚åœºå¿«ç…§å•ç‹¬æ¥å£ï¼Œå¯æ”¯æŒå¤šå•†å“  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'UKQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -84,7 +84,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# °å¿éÅÅĞò½Ó¿Ú ·½·¨Ò»
+		# æ¿å—æ’åºæ¥å£ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'BANKUAISORTING_1'
 		case_conf.continueWhenFailed = True
@@ -92,12 +92,12 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'SYMBOL': 'Trade',   
-				'PARAMS': '0,12,hsl,0' #Ò³Âë,±ÊÊı,ÅÅĞòÀ¸Î»,(1:Éı,0:½µ)
+				'PARAMS': '0,12,hsl,0' #é¡µç ,ç¬”æ•°,æ’åºæ ä½,(1:å‡,0:é™)
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# °å¿éÅÅĞò½Ó¿Ú ·½·¨¶ş
+		# æ¿å—æ’åºæ¥å£ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'BANKUAISORTING_2'
 		case_conf.continueWhenFailed = True
@@ -105,12 +105,12 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'SYMBOL': 'Trade',   
-				'PARAMS': '0,12,hsl,0' #Ê¼,Ö¹,ÅÅĞòÀ¸Î»,(1:Éı,0:½µ)
+				'PARAMS': '0,12,hsl,0' #å§‹,æ­¢,æ’åºæ ä½,(1:å‡,0:é™)
 			})
 		])
         runner_conf.casesConfig.extend([case_conf])
 		
-		# °å¿éÀà¹ÉÆ±ĞĞÇé ·½·¨Ò»
+		# æ¿å—ç±»è‚¡ç¥¨è¡Œæƒ… æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CATEQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -123,31 +123,31 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ´ÎĞÂ¹É ·½·¨Ò»
+		# æ¬¡æ–°è‚¡ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SUBNEWSTOCKRANKING_1'
 		case_conf.continueWhenFailed = True
 		case_conf.roundIntervalSec = 3
 		case_conf.paramStrs.extend([
 			json.dumps({
-				'PARAMS': '0,10,4,1'  #Ò³Âë,±ÊÊı,ÅÅĞòÀ¸Î»,(1:½µ,0:Éı)
+				'PARAMS': '0,10,4,1'  #é¡µç ,ç¬”æ•°,æ’åºæ ä½,(1:é™,0:å‡)
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ´ÎĞÂÕ® ·½·¨Ò»
+		# æ¬¡æ–°å€º æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SUBNEWBONDSTOCKRANKING_1'
 		case_conf.continueWhenFailed = True
 		case_conf.roundIntervalSec = 3
 		case_conf.paramStrs.extend([
 			json.dumps({
-				'PARAMS': '0,10,4,1' #Ò³Âë,±ÊÊı,ÅÅĞòÀ¸Î»,(1:½µ,0:Éı)
+				'PARAMS': '0,10,4,1' #é¡µç ,ç¬”æ•°,æ’åºæ ä½,(1:é™,0:å‡)
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# L2·Ö±Ê ·½·¨Ò»  ·µ»ØÈ«²¿µÄÊı¾İ
+		# L2åˆ†ç¬” æ–¹æ³•ä¸€  è¿”å›å…¨éƒ¨çš„æ•°æ®
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'L2TICKV2_1'
 		case_conf.continueWhenFailed = True
@@ -160,7 +160,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# L2·Ö±Ê ·½·¨¶ş  ×î¶à·µ»Ø100ÌõÊı¾İ
+		# L2åˆ†ç¬” æ–¹æ³•äºŒ  æœ€å¤šè¿”å›100æ¡æ•°æ®
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'L2TICKV2_2'
 		case_conf.continueWhenFailed = True
@@ -168,13 +168,13 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CODE': '600000.sh',
-				'page': '0,100,-1', #Ò³Âë,±ÊÊı,ÇëÇó¹æÔò
+				'page': '0,100,-1', #é¡µç ,ç¬”æ•°,è¯·æ±‚è§„åˆ™
 				'SUBTYPE': '1001'
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 	
-		# L2Öğ±Ê ·½·¨Ò»  ·µ»ØÈ«²¿Êı¾İ
+		# L2é€ç¬” æ–¹æ³•ä¸€  è¿”å›å…¨éƒ¨æ•°æ®
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'L2TICKDETAILV2_1'
 		case_conf.continueWhenFailed = True
@@ -188,7 +188,7 @@
 		runner_conf.casesConfig.extend([case_conf])
 
 
-		# L2Öğ±Ê ·½·¨¶ş   ×î¶à·µ»Ø100ÌõÊı¾İ
+		# L2é€ç¬” æ–¹æ³•äºŒ   æœ€å¤šè¿”å›100æ¡æ•°æ®
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'L2TICKDETAILV2_2'
 		case_conf.continueWhenFailed = True
@@ -196,13 +196,13 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CODE': '600000.sh',
-				'page': '0,100,-1', #Ò³Âë,±ÊÊı,ÇëÇó¹æÔò
+				'page': '0,100,-1', #é¡µç ,ç¬”æ•°,è¯·æ±‚è§„åˆ™
 				'SUBTYPE': '1001'
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 	
-		# ·Ö¼Û¡ª¡ªÊÊºÏËùÓĞÊĞ³¡  ·½·¨Ò»
+		# åˆ†ä»·â€”â€”é€‚åˆæ‰€æœ‰å¸‚åœº  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'MOREPRICE_1'
 		case_conf.continueWhenFailed = True
@@ -215,7 +215,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ·Ö¼Û¡ª¡ªÖ»ÊÊºÏÖĞ½ğËù  ·½·¨¶ş
+		# åˆ†ä»·â€”â€”åªé€‚åˆä¸­é‡‘æ‰€  æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'MOREPRICE_2'
 		case_conf.continueWhenFailed = True
@@ -227,7 +227,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ·ÖÁ¿--Ö»ÓÃÓÚ»¦ÉîL2 ·½·¨Ò»
+		# åˆ†é‡--åªç”¨äºæ²ªæ·±L2 æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'MOREVOLUMETEST_1'
 		case_conf.continueWhenFailed = True
@@ -235,12 +235,12 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CODE': '600000.sh',
-				'SUBTYPE': '1001' #IOS¶ÀÓĞ
+				'SUBTYPE': '1001' #IOSç‹¬æœ‰
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ·ÖÊ±Ã÷Ï¸  ·½·¨Ò»    ·µ»ØÈ«²¿µÄÊı¾İ
+		# åˆ†æ—¶æ˜ç»†  æ–¹æ³•ä¸€    è¿”å›å…¨éƒ¨çš„æ•°æ®
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TICK_1'
 		case_conf.continueWhenFailed = True
@@ -253,7 +253,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ·ÖÊ±Ã÷Ï¸  ·½·¨¶ş    ×î¶à·µ»Ø100ÌõÊı¾İ
+		# åˆ†æ—¶æ˜ç»†  æ–¹æ³•äºŒ    æœ€å¤šè¿”å›100æ¡æ•°æ®
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TICK_2'
 		case_conf.continueWhenFailed = True
@@ -261,13 +261,13 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CODE': '600000.sh',
-				'page': '0,100,-1', #Ò³Âë,±ÊÊı,ÇëÇó¹æÔò
+				'page': '0,100,-1', #é¡µç ,ç¬”æ•°,è¯·æ±‚è§„åˆ™
 				'SUBTYPE': '1001'
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 	
-		# ¸Û¹ÉÆäËû ·½·¨Ò»
+		# æ¸¯è‚¡å…¶ä»– æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'HKSTOCKINFO_1'
 		case_conf.continueWhenFailed = True
@@ -280,7 +280,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ¸ö¹ÉËùÊô°å¿éĞĞÇé ·½·¨Ò»
+		# ä¸ªè‚¡æ‰€å±æ¿å—è¡Œæƒ… æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'BANKUAIQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -293,7 +293,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ¹ÉÆ±²éÑ¯ ·½·¨Ò»
+		# è‚¡ç¥¨æŸ¥è¯¢ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SEARTEST_1'
 		case_conf.continueWhenFailed = True
@@ -305,7 +305,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¹ÉÆ±²éÑ¯ ·½·¨¶ş
+		# è‚¡ç¥¨æŸ¥è¯¢ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SEARTEST_2'
 		case_conf.continueWhenFailed = True
@@ -318,7 +318,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¹ÉÆ±²éÑ¯ ·½·¨Èı
+		# è‚¡ç¥¨æŸ¥è¯¢ æ–¹æ³•ä¸‰
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SEARTEST_3'
 		case_conf.continueWhenFailed = True
@@ -332,7 +332,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¹ÉÆ±²éÑ¯ ·½·¨ËÄ
+		# è‚¡ç¥¨æŸ¥è¯¢ æ–¹æ³•å››
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SEARTEST_4'
 		case_conf.continueWhenFailed = True
@@ -347,7 +347,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¹ÉÆ±²éÑ¯ ·½·¨Îå
+		# è‚¡ç¥¨æŸ¥è¯¢ æ–¹æ³•äº”
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SEARTEST_5'
 		case_conf.continueWhenFailed = True
@@ -362,7 +362,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ĞĞÇé¿ìÕÕ ·½·¨Ò»
+		# è¡Œæƒ…å¿«ç…§ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'QUOTEDETAIL_1'
 		case_conf.continueWhenFailed = True
@@ -374,7 +374,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ĞĞÇé¿ìÕÕ ·½·¨¶ş
+		# è¡Œæƒ…å¿«ç…§ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'QUOTEDETAIL_2'
 		case_conf.continueWhenFailed = True
@@ -383,13 +383,13 @@
 			json.dumps({
 				'CODE': '600000.sh',
 				'TICKCOUNT': '10',
-				'STOCKFIELDS': '-1',  #'-1'/''´«ÕâÈı¸ö²ÎÊı¿É·µ»ØËùÓĞ£¬ÇÒ								Ö»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö×Ô¶¨Òå
-				'FIELDS':'-1'	#Ö»ÄÜ´«'-1'£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö							×Ô¶¨Òå£¬²»¿É´«¿Õ£¬Èô´«¿Õ£¬IOS¶Ë²»·µ»Øµş¼Ó							Ö¸±ê£¬Andriod¶Ë²»Çå³ş
+				'STOCKFIELDS': '-1',  #'-1'/''ä¼ è¿™ä¸‰ä¸ªå‚æ•°å¯è¿”å›æ‰€æœ‰ï¼Œä¸”								åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒè‡ªå®šä¹‰
+				'FIELDS':'-1'	#åªèƒ½ä¼ '-1'ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒ							è‡ªå®šä¹‰ï¼Œä¸å¯ä¼ ç©ºï¼Œè‹¥ä¼ ç©ºï¼ŒIOSç«¯ä¸è¿”å›å åŠ 							æŒ‡æ ‡ï¼ŒAndriodç«¯ä¸æ¸…æ¥š
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# »¦¹ÉÍ¨ºÍÉî¹ÉÍ¨¶î¶È ·½·¨Ò»
+		# æ²ªè‚¡é€šå’Œæ·±è‚¡é€šé¢åº¦ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'HSAMOUNT_1'
 		case_conf.continueWhenFailed = True
@@ -401,19 +401,19 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# »¦ÉîA¹É¼°Ö¸ÊıÕÇµøÆ½¼ÒÊı ·½·¨Ò»
+		# æ²ªæ·±Aè‚¡åŠæŒ‡æ•°æ¶¨è·Œå¹³å®¶æ•° æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'UPDOWNS_1'
 		case_conf.continueWhenFailed = True
 		case_conf.roundIntervalSec = 3
 		case_conf.paramStrs.extend([
 			json.dumps({
-				'UDCODE': '000001.sh'   #Ö¸Êı´úÂë
+				'UDCODE': '000001.sh'   #æŒ‡æ•°ä»£ç 
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# »¦Éîµ±ÈÕÕÇµøÍ³¼ÆÊı¾İ ·½·¨Ò»
+		# æ²ªæ·±å½“æ—¥æ¶¨è·Œç»Ÿè®¡æ•°æ® æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'MARKETUPDOWN_1'
 		case_conf.continueWhenFailed = True
@@ -425,7 +425,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# »ñÈ¡¸Û¹É¼Û²î¶ÔÕÕ±í ·½·¨Ò»
+		# è·å–æ¸¯è‚¡ä»·å·®å¯¹ç…§è¡¨ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'HKPRICEINFO_1'
 		case_conf.continueWhenFailed = True
@@ -437,7 +437,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¼¯ºÏ¾º¼Û1--´«¹ÉÆ±´úÂë ·½·¨Ò»
+		# é›†åˆç«ä»·1--ä¼ è‚¡ç¥¨ä»£ç  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'BIDCHART_1'
 		case_conf.continueWhenFailed = True
@@ -450,7 +450,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¼¯ºÏ¾º¼Û2--´«¿ìÕÕ ·½·¨¶ş
+		# é›†åˆç«ä»·2--ä¼ å¿«ç…§ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'BIDCHART_2'
 		case_conf.continueWhenFailed = True
@@ -463,7 +463,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ½»Ò×ĞĞÇé  ·½·¨Ò»
+		# äº¤æ˜“è¡Œæƒ…  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TRADEQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -475,7 +475,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 			
-		# ½Ú¼ÙÈÕ ·½·¨Ò»
+		# èŠ‚å‡æ—¥ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'HOLIDAY_1'
 		case_conf.continueWhenFailed = True
@@ -487,7 +487,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ¾­¼ÍÏ¯Î» ·½·¨Ò»
+		# ç»çºªå¸­ä½ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'BROKERINFO_1'
 		case_conf.continueWhenFailed = True
@@ -499,7 +499,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¿É×ªÕ®Òç¼Û²éÑ¯ ·½·¨Ò»
+		# å¯è½¬å€ºæº¢ä»·æŸ¥è¯¢ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CONVERTIBLE_1'
 		case_conf.continueWhenFailed = True
@@ -511,7 +511,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÀúÊ·KÏß  ·½·¨Ò»
+		# å†å²Kçº¿  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OHLCV3_1'
 		case_conf.continueWhenFailed = True
@@ -525,7 +525,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		 # ÀúÊ·KÏß ·½·¨¶ş
+		 # å†å²Kçº¿ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OHLCV3_2'
 		case_conf.continueWhenFailed = True
@@ -542,7 +542,7 @@
 		runner_conf.casesConfig.extend([case_conf])
 
 
-		# ÀúÊ·KÏß  ·½·¨Èı
+		# å†å²Kçº¿  æ–¹æ³•ä¸‰
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OHLCV3_3'
 		case_conf.continueWhenFailed = True
@@ -558,7 +558,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		 # ÀúÊ·KÏß  ·½·¨ËÄ
+		 # å†å²Kçº¿  æ–¹æ³•å››
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OHLCV3_4'
 		case_conf.continueWhenFailed = True
@@ -575,7 +575,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÀúÊ·KÏß  ·½·¨Îå
+		# å†å²Kçº¿  æ–¹æ³•äº”
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OHLCV3_5'
 		case_conf.continueWhenFailed = True
@@ -592,7 +592,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÀúÊ·KÏß  ·½·¨Áù
+		# å†å²Kçº¿  æ–¹æ³•å…­
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OHLCV3_6'
 		case_conf.continueWhenFailed = True
@@ -609,7 +609,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÀúÊ··ÖÊ±--´«µ¥Ö»¹ÉÆ± ·½·¨Ò»
+		# å†å²åˆ†æ—¶--ä¼ å•åªè‚¡ç¥¨ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'HISTORYCHART_1'
 		case_conf.continueWhenFailed = True
@@ -623,7 +623,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÀúÊ··ÖÊ±--´«¿ìÕÕ  ·½·¨¶ş
+		# å†å²åˆ†æ—¶--ä¼ å¿«ç…§  æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'HISTORYCHART_2'
 		case_conf.continueWhenFailed = True
@@ -637,7 +637,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# Á½ÊĞ¸Û¹ÉÍ¨¶î¶È×ÊÑ¶ ·½·¨Ò»
+		# ä¸¤å¸‚æ¸¯è‚¡é€šé¢åº¦èµ„è®¯ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'HKMARINFO_1'
 		case_conf.continueWhenFailed = True
@@ -649,7 +649,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# L2-ÂòÂô¶ÓÁĞ ·½·¨Ò»   
+		# L2-ä¹°å–é˜Ÿåˆ— æ–¹æ³•ä¸€   
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'ORDERQUANTITY_1'
 		case_conf.continueWhenFailed = True
@@ -662,7 +662,7 @@
 		runner_conf.casesConfig.extend([case_conf])
 
 
-		# L2-ÂòÂô¶ÓÁĞ ·½·¨¶ş    
+		# L2-ä¹°å–é˜Ÿåˆ— æ–¹æ³•äºŒ    
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'ORDERQUANTITY_2'
 		case_conf.continueWhenFailed = True
@@ -676,7 +676,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÅÅĞò½Ó¿Ú ·½·¨Ò»
+		# æ’åºæ¥å£ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CATESORTING_1'
 		case_conf.continueWhenFailed = True
@@ -684,12 +684,12 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CateType': 'SH1001',       
-				'PARAMS': '0,12,1,0,1'  #Ò³Âë,±ÊÊı,ÅÅĞò×Ö¶Î,(1:½µ,0:Éı),(ÊÇ·ñ								ÏÔÊ¾Í£ÅÆ¹É£¬1:ÊÇ,0:·Ç)
+				'PARAMS': '0,12,1,0,1'  #é¡µç ,ç¬”æ•°,æ’åºå­—æ®µ,(1:é™,0:å‡),(æ˜¯å¦								æ˜¾ç¤ºåœç‰Œè‚¡ï¼Œ1:æ˜¯,0:é)
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÅÅĞò½Ó¿Ú ·½·¨¶ş
+		# æ’åºæ¥å£ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CATESORTING_2'
 		case_conf.continueWhenFailed = True
@@ -697,14 +697,14 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CateType': 'SH1001',      
-				'PARAMS': '0,12,1,0,1', #Ò³Âë,±ÊÊı,ÅÅĞò×Ö¶Î,(1:½µ,0:Éı),(ÊÇ·ñ								ÏÔÊ¾Í£ÅÆ¹É£¬1:ÊÇ,0:·Ç)
-				'STOCKFIELDS': '-1',   #'-1'/'NULL'´«ÕâÈı¸ö²ÎÊı¿É·µ»ØËù								ÓĞ£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö×Ô¶¨Òå 
-				'ADDVALUEFIELDS': '-1'  #Ö»ÄÜ´«'-1'£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö							×Ô¶¨Òå£¬²»¿É´«¿Õ£¬Èô´«¿Õ£¬IOS¶Ë²»·µ»Øµş¼Ó							Ö¸±ê£¬Andriod¶Ë²»Çå³ş
+				'PARAMS': '0,12,1,0,1', #é¡µç ,ç¬”æ•°,æ’åºå­—æ®µ,(1:é™,0:å‡),(æ˜¯å¦								æ˜¾ç¤ºåœç‰Œè‚¡ï¼Œ1:æ˜¯,0:é)
+				'STOCKFIELDS': '-1',   #'-1'/'NULL'ä¼ è¿™ä¸‰ä¸ªå‚æ•°å¯è¿”å›æ‰€								æœ‰ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒè‡ªå®šä¹‰ 
+				'ADDVALUEFIELDS': '-1'  #åªèƒ½ä¼ '-1'ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒ							è‡ªå®šä¹‰ï¼Œä¸å¯ä¼ ç©ºï¼Œè‹¥ä¼ ç©ºï¼ŒIOSç«¯ä¸è¿”å›å åŠ 							æŒ‡æ ‡ï¼ŒAndriodç«¯ä¸æ¸…æ¥š
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÅÅĞò½Ó¿Ú ·½·¨Èı
+		# æ’åºæ¥å£ æ–¹æ³•ä¸‰
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CATESORTING_3'
 		case_conf.continueWhenFailed = True
@@ -712,14 +712,14 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CateType': 'SH1001',       
-				'PARAMS': '0,12,1,0,1', #Ò³Âë,±ÊÊı,ÅÅĞò×Ö¶Î,(1:½µ,0:Éı),(ÊÇ·ñ								ÏÔÊ¾Í£ÅÆ¹É£¬1:ÊÇ,0:·Ç)
-				'STOCKFIELDS': '-1',   #'-1'/'NULL'´«ÕâÈı¸ö²ÎÊı¿É·µ»ØËù								ÓĞ£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö×Ô¶¨Òå 
-				'ADDVALUEFIELDS': '-1'  #Ö»ÄÜ´«'-1'£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö							×Ô¶¨Òå£¬²»¿É´«¿Õ£¬Èô´«¿Õ£¬IOS¶Ë²»·µ»Øµş¼Ó							Ö¸±ê£¬Andriod¶Ë²»Çå³ş
+				'PARAMS': '0,12,1,0,1', #é¡µç ,ç¬”æ•°,æ’åºå­—æ®µ,(1:é™,0:å‡),(æ˜¯å¦								æ˜¾ç¤ºåœç‰Œè‚¡ï¼Œ1:æ˜¯,0:é)
+				'STOCKFIELDS': '-1',   #'-1'/'NULL'ä¼ è¿™ä¸‰ä¸ªå‚æ•°å¯è¿”å›æ‰€								æœ‰ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒè‡ªå®šä¹‰ 
+				'ADDVALUEFIELDS': '-1'  #åªèƒ½ä¼ '-1'ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒ							è‡ªå®šä¹‰ï¼Œä¸å¯ä¼ ç©ºï¼Œè‹¥ä¼ ç©ºï¼ŒIOSç«¯ä¸è¿”å›å åŠ 							æŒ‡æ ‡ï¼ŒAndriodç«¯ä¸æ¸…æ¥š
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 	
-		# ÅÌºó×ßÊÆ½Ó¿Ú ·½·¨Ò»
+		# ç›˜åèµ°åŠ¿æ¥å£ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'AFTERHOURSCHART_1'
 		case_conf.continueWhenFailed = True
@@ -732,7 +732,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÅÌºó×ßÊÆ½Ó¿Ú ·½·¨¶ş
+		# ç›˜åèµ°åŠ¿æ¥å£ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'AFTERHOURSCHART_2'
 		case_conf.continueWhenFailed = True
@@ -745,7 +745,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÆÚÈ¨¡ª¡ªTĞÍ±¨¼Û ·½·¨Ò»
+		# æœŸæƒâ€”â€”Tå‹æŠ¥ä»· æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OPTIONTQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -758,7 +758,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÆÚÈ¨¡ª¡ª±êµÄĞĞÇé ·½·¨Ò»
+		# æœŸæƒâ€”â€”æ ‡çš„è¡Œæƒ… æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OPTIONLIST_1'
 		case_conf.continueWhenFailed = True
@@ -770,7 +770,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÆÚÈ¨¡ª¡ª½»¸îÔÂ  ·½·¨Ò»
+		# æœŸæƒâ€”â€”äº¤å‰²æœˆ  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OPTIONEXPIRE_1'
 		case_conf.continueWhenFailed = True
@@ -782,7 +782,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÆÚÈ¨¡ª¡ª½»¸îÔÂ  ·½·¨¶ş
+		# æœŸæƒâ€”â€”äº¤å‰²æœˆ  æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OPTIONEXPIRE_2'
 		case_conf.continueWhenFailed = True
@@ -795,7 +795,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÆÚÈ¨¡ª¡ªÉÌÆ·ÏêÇé ·½·¨Ò»
+		# æœŸæƒâ€”â€”å•†å“è¯¦æƒ… æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OPTIONQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -808,7 +808,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		 # ÊĞ³¡µ±Äê½»Ò×ÈÕ  ·½·¨Ò»(·ÏÆú)
+		 # å¸‚åœºå½“å¹´äº¤æ˜“æ—¥  æ–¹æ³•ä¸€(åºŸå¼ƒ)
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TRADEDATE_1'
 		case_conf.continueWhenFailed = True
@@ -820,7 +820,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÊĞ³¡µ±Äê½»Ò×ÈÕ  ·½·¨¶ş
+		# å¸‚åœºå½“å¹´äº¤æ˜“æ—¥  æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TRADEDATE_2'
 		case_conf.continueWhenFailed = True
@@ -828,12 +828,12 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'MARKET': 'sh', 
-				'DATE': '20200524' #´«None¡¢'null'»ò²»´«Ê±·µ»ØËùÓĞ
+				'DATE': '20200524' #ä¼ Noneã€'null'æˆ–ä¸ä¼ æ—¶è¿”å›æ‰€æœ‰
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ĞÂ°æ¹ÉÃûÔÚÏßËÑË÷½Ó¿Ú ·½·¨Ò»
+		# æ–°ç‰ˆè‚¡ååœ¨çº¿æœç´¢æ¥å£ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SEARV2TEST_1'
 		case_conf.continueWhenFailed = True
@@ -846,7 +846,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		 # ĞÂ°æ¹ÉÃûÔÚÏßËÑË÷½Ó¿Ú ·½·¨¶ş
+		 # æ–°ç‰ˆè‚¡ååœ¨çº¿æœç´¢æ¥å£ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'SEARV2TEST_2'
 		case_conf.continueWhenFailed = True
@@ -860,7 +860,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÒªÔ¼ÊÕ¹º½Ó¿ÚÇëÇó  ·½·¨Ò»
+		# è¦çº¦æ”¶è´­æ¥å£è¯·æ±‚  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OFFERQUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -873,7 +873,7 @@
 		runner_conf.casesConfig.extend([case_conf])
 
 
-		# ÒªÔ¼ÊÕ¹º½Ó¿ÚÇëÇó  ·½·¨¶ş
+		# è¦çº¦æ”¶è´­æ¥å£è¯·æ±‚  æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OFFERQUOTE_2'
 		case_conf.continueWhenFailed = True
@@ -882,14 +882,14 @@
 			json.dumps({
 				'PAGEINDEX': '0',   
 				'PAGESIZE': '10',    
-				'FIELD': '1',    #ÅÅĞòÀ¸Î»    
-				'ASCENDING': '0',   #(0Éı£¬1½µ)    
+				'FIELD': '1',    #æ’åºæ ä½    
+				'ASCENDING': '0',   #(0å‡ï¼Œ1é™)    
 
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ÔöÖµÖ¸±ê ·½·¨Ò» £¨·ÏÆú£©
+		# å¢å€¼æŒ‡æ ‡ æ–¹æ³•ä¸€ ï¼ˆåºŸå¼ƒï¼‰
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'ADDVALUE_1'
 		case_conf.continueWhenFailed = True
@@ -902,7 +902,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÔöÖµÖ¸±ê ·½·¨¶ş £¨·ÏÆú£©
+		# å¢å€¼æŒ‡æ ‡ æ–¹æ³•äºŒ ï¼ˆåºŸå¼ƒï¼‰
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'ADDVALUE_2'
 		case_conf.continueWhenFailed = True
@@ -916,7 +916,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ÔöÖµÖ¸±ê ·½·¨Èı 
+		# å¢å€¼æŒ‡æ ‡ æ–¹æ³•ä¸‰ 
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'ADDVALUE_3'
 		case_conf.continueWhenFailed = True
@@ -926,12 +926,12 @@
 				'CODE': '600000.sh',
 				'SUBTYPE': '1001',
 				'MARKET':'sh',   
-				'FIELDS':'-1'  #Ö»ÄÜ´«'-1'£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö							×Ô¶¨Òå
+				'FIELDS':'-1'  #åªèƒ½ä¼ '-1'ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒ							è‡ªå®šä¹‰
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		----# ÕÇµø·Ö²¼ÇëÇó½Ó¿Ú ·½·¨Ò»
+		----# æ¶¨è·Œåˆ†å¸ƒè¯·æ±‚æ¥å£ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'COMPOUNDUPDOWN_1'
 		case_conf.continueWhenFailed = True
@@ -939,13 +939,13 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'MARKET': 'sh',  
-				'TYPE': '0',  # Àà±ğ(0£ºµ±ÈÕ,1£º30ÈÕ)
+				'TYPE': '0',  # ç±»åˆ«(0ï¼šå½“æ—¥,1ï¼š30æ—¥)
 				'TIME':'201912241024'    
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# Ö¤È¯ĞĞÇéÁĞ±í ·½·¨Ò»
+		# è¯åˆ¸è¡Œæƒ…åˆ—è¡¨ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'QUOTE_1'
 		case_conf.continueWhenFailed = True
@@ -957,7 +957,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# Ö¤È¯ĞĞÇéÁĞ±í ·½·¨¶ş
+		# è¯åˆ¸è¡Œæƒ…åˆ—è¡¨ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'QUOTE_2'
 		case_conf.continueWhenFailed = True
@@ -965,13 +965,13 @@
 		case_conf.paramStrs.extend([
 			json.dumps({
 				'CODES': '600000.sh,000001.sz,00700.hk'
-				'STOCKFIELDS': '-1', #'-1'/'NULL'´«ÕâÈı¸ö²ÎÊı¿É·µ»ØËù								ÓĞ£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö×Ô¶¨Òå
-				'FIELDS': '-1'	#Ö»ÄÜ´«'-1'£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö							×Ô¶¨Òå£¬²»¿É´«¿Õ£¬Èô´«¿Õ£¬IOS¶Ë²»·µ»Øµş¼Ó							Ö¸±ê£¬Andriod¶Ë²»Çå³ş
+				'STOCKFIELDS': '-1', #'-1'/'NULL'ä¼ è¿™ä¸‰ä¸ªå‚æ•°å¯è¿”å›æ‰€								æœ‰ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒè‡ªå®šä¹‰
+				'FIELDS': '-1'	#åªèƒ½ä¼ '-1'ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒ							è‡ªå®šä¹‰ï¼Œä¸å¯ä¼ ç©ºï¼Œè‹¥ä¼ ç©ºï¼ŒIOSç«¯ä¸è¿”å›å åŠ 							æŒ‡æ ‡ï¼ŒAndriodç«¯ä¸æ¸…æ¥š
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ×ßÊÆµş¼Ó ·½·¨Ò»
+		# èµ°åŠ¿å åŠ  æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OVERLAYCHART_1'
 		case_conf.continueWhenFailed = True
@@ -982,12 +982,12 @@
 				'SUBTYPE': '1001',
 				'superpositionCode': '600004.sh',
 				'TYPE': 'ChartTypeOneDay',  
-				'pointType':'2' #IOS¶ËÎŞ
+				'pointType':'2' #IOSç«¯æ— 
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆµş¼Ó ·½·¨¶ş
+		# èµ°åŠ¿å åŠ  æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'OVERLAYCHART_2'
 		case_conf.continueWhenFailed = True
@@ -998,12 +998,12 @@
 				'SUBTYPE': '1001', 
 				'superpositionCode': '600004.sh',
 				'TYPE': 'ChartTypeOneDay',  
-				'pointType':'2' #IOS¶ËÎŞ
+				'pointType':'2' #IOSç«¯æ— 
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ×ßÊÆ¸±Í¼Ö¸±ê½Ó¿Ú ·½·¨Ò»
+		# èµ°åŠ¿å‰¯å›¾æŒ‡æ ‡æ¥å£ æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTSUB_1'
 		case_conf.continueWhenFailed = True
@@ -1017,7 +1017,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆ¸±Í¼Ö¸±ê½Ó¿Ú ·½·¨¶ş
+		# èµ°åŠ¿å‰¯å›¾æŒ‡æ ‡æ¥å£ æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTSUB_2'
 		case_conf.continueWhenFailed = True
@@ -1033,7 +1033,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ×ßÊÆÊı¾İ ·½·¨Ò»
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•ä¸€
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTV2TEST_1'
 		case_conf.continueWhenFailed = True
@@ -1047,7 +1047,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆÊı¾İ ·½·¨¶ş
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•äºŒ
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTV2TEST_2'
 		case_conf.continueWhenFailed = True
@@ -1061,7 +1061,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆÊı¾İ ·½·¨Èı
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•ä¸‰
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTV2TEST_3'
 		case_conf.continueWhenFailed = True
@@ -1075,7 +1075,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆÊı¾İ ·½·¨ËÄ
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•å››
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTV2TEST_4'
 		case_conf.continueWhenFailed = True
@@ -1084,13 +1084,13 @@
 			json.dumps({
 				'CODE': '600000.sh',
 				'TYPE': 'ChartTypeOneDay',   
-				'PointAddTypes':'2',  #IOSÎŞ´Ë²ÎÊı
+				'PointAddTypes':'2',  #IOSæ— æ­¤å‚æ•°
 				'SUBTYPE':'1001'
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆÊı¾İ ·½·¨Îå
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•äº”
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTV2TEST_5'
 		case_conf.continueWhenFailed = True
@@ -1099,13 +1099,13 @@
 			json.dumps({
 				'CODE': '600000.sh',
 				'TYPE': 'ChartTypeOneDay',   
-				'PointAddTypes':'2',  #IOSÎŞ´Ë²ÎÊı  
+				'PointAddTypes':'2',  #IOSæ— æ­¤å‚æ•°  
 				'SUBTYPE':'1001'
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆÊı¾İ ·½·¨Áù
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•å…­
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'CHARTV2TEST_6'
 		case_conf.continueWhenFailed = True
@@ -1122,7 +1122,7 @@
 		
 		TCP-----------------------------------------------------------------
 
-		# ×ßÊÆÊı¾İ ·½·¨Ò» ¶ÔÓ¦µÄTCP  ¶ÔÓ¦×ßÊÆÊı¾İµÄ·½·¨Îå
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•ä¸€ å¯¹åº”çš„TCP  å¯¹åº”èµ°åŠ¿æ•°æ®çš„æ–¹æ³•äº”
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TCP_CHARTV2TEST_1'
 		case_conf.continueWhenFailed = True
@@ -1138,7 +1138,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ×ßÊÆÊı¾İ ·½·¨¶ş ¶ÔÓ¦µÄTCP  ¶ÔÓ¦×ßÊÆÊı¾İµÄ·½·¨Áù
+		# èµ°åŠ¿æ•°æ® æ–¹æ³•äºŒ å¯¹åº”çš„TCP  å¯¹åº”èµ°åŠ¿æ•°æ®çš„æ–¹æ³•å…­
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TCP_CHARTV2TEST_2'
 		case_conf.continueWhenFailed = True
@@ -1154,7 +1154,7 @@
 		])
         runner_conf.casesConfig.extend([case_conf])
 		
-		# ½»Ò×ĞĞÇé ·½·¨Ò» ¶ÔÓ¦µÄTCP £¨IOSÖĞÎª·¢ÏÖ¸Ã·½·¨£©
+		# äº¤æ˜“è¡Œæƒ… æ–¹æ³•ä¸€ å¯¹åº”çš„TCP ï¼ˆIOSä¸­ä¸ºå‘ç°è¯¥æ–¹æ³•ï¼‰
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TCP_TRADETEST_1'
 		case_conf.continueWhenFailed = True
@@ -1167,7 +1167,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 		
-		# ĞĞÇé¿ìÕÕ ·½·¨Ò» ¶ÔÓ¦µÄTCP
+		# è¡Œæƒ…å¿«ç…§ æ–¹æ³•ä¸€ å¯¹åº”çš„TCP
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'QUOTEDETAILTCPTEST_1'
 		case_conf.continueWhenFailed = True
@@ -1180,7 +1180,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ĞĞÇé¿ìÕÕ ·½·¨¶ş ¶ÔÓ¦µÄTCP
+		# è¡Œæƒ…å¿«ç…§ æ–¹æ³•äºŒ å¯¹åº”çš„TCP
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'QUOTEDETAILTCPTEST_2'
 		case_conf.continueWhenFailed = True
@@ -1189,14 +1189,14 @@
 			json.dumps({
 				'CODE': '600000.sh',
 				'TICKCOUNT': '10',
-				'STOCKFIELDS': '-1', #'-1'/'NULL'´«ÕâÈı¸ö²ÎÊı¿É·µ»ØËù								ÓĞ£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö×Ô¶¨Òå
-				'FIELDS': '-1',  #Ö»ÄÜ´«'-1'£¬ÇÒÖ»ÄÜ·µ»ØËùÓĞ£¬Ä¿Ç°Ôİ²»Ö§³Ö							×Ô¶¨Òå£¬²»¿É´«¿Õ£¬Èô´«¿Õ£¬IOS¶Ë²»·µ»Øµş¼Ó							Ö¸±ê£¬Andriod¶Ë²»Çå³ş
+				'STOCKFIELDS': '-1', #'-1'/'NULL'ä¼ è¿™ä¸‰ä¸ªå‚æ•°å¯è¿”å›æ‰€								æœ‰ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒè‡ªå®šä¹‰
+				'FIELDS': '-1',  #åªèƒ½ä¼ '-1'ï¼Œä¸”åªèƒ½è¿”å›æ‰€æœ‰ï¼Œç›®å‰æš‚ä¸æ”¯æŒ							è‡ªå®šä¹‰ï¼Œä¸å¯ä¼ ç©ºï¼Œè‹¥ä¼ ç©ºï¼ŒIOSç«¯ä¸è¿”å›å åŠ 							æŒ‡æ ‡ï¼ŒAndriodç«¯ä¸æ¸…æ¥š
 				'SECONDS': '100'
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])	
 			
-		# ·Ö±ÊL2 ·½·¨Ò» ¶ÔÓ¦µÄTCP
+		# åˆ†ç¬”L2 æ–¹æ³•ä¸€ å¯¹åº”çš„TCP
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TCP_TICKTEST_1'
 		case_conf.continueWhenFailed = True
@@ -1209,7 +1209,7 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])
 
-		# ¸Û¹ÉÍ¨¶î¶ÈºÍ»¦Éî¹ÉÍ¨¶î¶È×ßÊÆ½Ó¿Ú
+		# æ¸¯è‚¡é€šé¢åº¦å’Œæ²ªæ·±è‚¡é€šé¢åº¦èµ°åŠ¿æ¥å£
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'TONGLINETEST_1'
 		case_conf.continueWhenFailed = True
@@ -1221,14 +1221,14 @@
 		])
 		runner_conf.casesConfig.extend([case_conf])	
 	
-		# ÕÇÍ£ÉÌÆ·ĞĞÇéÇëÇóÀà
+		# æ¶¨åœå•†å“è¡Œæƒ…è¯·æ±‚ç±»
 		case_conf = TestcaseConfig()
 		case_conf.testcaseID = 'ZTSORTINGTEST_1'
 		case_conf.continueWhenFailed = True
 		case_conf.roundIntervalSec = 3
 		case_conf.paramStrs.extend([
 			json.dumps({
-				'PARAMS':'0,20,6,0', #Ò³Âë,±ÊÊı,ÅÅĞòÀ¸Î»,(1:½µ,0:Éı)
+				'PARAMS':'0,20,6,0', #é¡µç ,ç¬”æ•°,æ’åºæ ä½,(1:é™,0:å‡)
 				'TYPE': 'allzt',
 			})
 		])
