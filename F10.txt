@@ -188,7 +188,8 @@ case_conf.roundIntervalSec = 3
 case_conf.paramStrs.extend([
 	json.dumps({
 		'DATE': '2019-12-26',
-		'SRC': 'd'
+		'SRC': 'd',
+		'TYPE': 'bj' #非新三板时可不传type
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])
@@ -617,7 +618,8 @@ case_conf.continueWhenFailed = True
 case_conf.roundIntervalSec = 3
 case_conf.paramStrs.extend([
 	json.dumps({
-		'SRC': 'd'
+		'SRC': 'd',
+		'TYPE': 'bj' #非新三板时可不传type
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])
@@ -787,6 +789,18 @@ case_conf.paramStrs.extend([
 		'SYMBOL': '0',
             	'REQUESTTYPE': '/clsimportantnewslist',
             	'PARAMS': '0,200'
+	})
+])
+runner_conf.casesConfig.extend([case_conf])
+
+# 沪股通和深股通额度数据接口（合并）
+case_conf = TestcaseConfig()
+case_conf.testcaseID ='HSAMOUNTALL_1'
+case_conf.continueWhenFailed = True
+case_conf.roundIntervalSec = 3
+case_conf.paramStrs.extend([
+	json.dumps({
+		
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])

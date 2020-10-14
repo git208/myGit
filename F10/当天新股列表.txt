@@ -1,4 +1,4 @@
-﻿# 当天新股列表 方法一
+# 当天新股列表 方法一
 case_conf = TestcaseConfig()
 case_conf.testcaseID = 'F10_NEWSHARELIST_1'
 case_conf.continueWhenFailed = True
@@ -6,7 +6,8 @@ case_conf.roundIntervalSec = 3
 case_conf.paramStrs.extend([
 	json.dumps({
 		'DATE': '2019-12-26',
-		'SRC': 'd'
+		'SRC': 'd',
+		'TYPE': 'bj' #非新三板时可不传type
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])

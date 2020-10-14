@@ -1,12 +1,11 @@
-# 新股日历  方法一
+# 沪股通和深股通额度数据接口（合并）
 case_conf = TestcaseConfig()
-case_conf.testcaseID ='F10_CALENDAR_1'
+case_conf.testcaseID ='HSAMOUNTALL_1'
 case_conf.continueWhenFailed = True
 case_conf.roundIntervalSec = 3
 case_conf.paramStrs.extend([
 	json.dumps({
-		'SRC': 'd',
-		'TYPE': 'bj' #非新三板时可不传type
+		
 	})
 ])
 runner_conf.casesConfig.extend([case_conf])
