@@ -1247,3 +1247,26 @@
 			})
 		])
 		runner_conf.casesConfig.extend([case_conf])
+		# AB股行情列表 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ABQUOTELISTTEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'PARAMS': '0,12,4,0' #始,止,排序栏位(4,10,12,13),(1:降序,0:升序)
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
+		
+		# AB股联动代码查询 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ABQUOTETEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '200530.sz'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])

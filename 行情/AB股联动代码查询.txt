@@ -1,0 +1,11 @@
+# AB股联动代码查询 方法一
+		case_conf = TestcaseConfig()
+		case_conf.testcaseID = 'ABQUOTETEST_1'
+		case_conf.continueWhenFailed = True
+		case_conf.roundIntervalSec = 3
+		case_conf.paramStrs.extend([
+			json.dumps({
+				'CODE': '200530.sz'
+			})
+		])
+		runner_conf.casesConfig.extend([case_conf])
